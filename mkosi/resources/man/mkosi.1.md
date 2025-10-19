@@ -483,7 +483,7 @@ boolean argument: either `1`, `yes`, or `true` to enable, or `0`, `no`,
 :   The distribution to install in the image. Takes one of the following
     arguments: `fedora`, `debian`, `kali`, `ubuntu`, `arch`, `opensuse`,
     `mageia`, `centos`, `rhel`, `rhel-ubi`, `openmandriva`, `rocky`, `alma`,
-    `azure` or `custom`. If not specified, defaults to the distribution of
+    `azure`, `gentoo` or `custom`. If not specified, defaults to the distribution of
     the host or `custom` if the distribution of the host is not a supported
     distribution.
 
@@ -531,7 +531,7 @@ boolean argument: either `1`, `yes`, or `true` to enable, or `0`, `no`,
     | `mageia`       | https://www.mageia.org            |                                |
     | `openmandriva` | http://mirrors.openmandriva.org   |                                |
     | `azure`        | https://packages.microsoft.com/   |                                |
-
+    | `gentoo`       | https://tux.rainside.sk/gentoo/   | https://tux.rainside.sk/gentoo/|
 `Snapshot=`
 :   Download packages from the given snapshot instead of downloading the latest
     distribution packages from the given mirror. Takes a snapshot ID (the format
@@ -549,7 +549,7 @@ boolean argument: either `1`, `yes`, or `true` to enable, or `0`, `no`,
     | `ubuntu`       | http://archive.ubuntu.com          | http://ports.ubuntu.com        |
     | `centos`       | https://composes.stream.centos.org |                                |
     | `fedora`       | https://kojipkgs.fedoraproject.org |                                |
-
+    | `gentoo`       | https://tux.rainside.sk/gentoo/    | https://tux.rainside.sk/gentoo/|
     For any distribution not listed above, snapshots are not supported.
 
 `LocalMirror=`, `--local-mirror=`
@@ -2316,6 +2316,8 @@ distributions:
 
 * *RHEL UBI*
 
+* *Gentoo*
+
 * *OpenMandriva*
 
 * *Rocky Linux*
@@ -2335,6 +2337,7 @@ Specifically,
 any distribution that packages **apt** may be used to build *Debian*, *Kali* or *Ubuntu* images.
 Any distribution that packages **dnf** may be used to build images for any of the RPM-based distributions.
 Any distro that packages **pacman** may be used to build *Arch Linux* images.
+Any distro that packages **portage** may be used to build *Gentoo* images.
 Any distribution that packages **zypper** may be used to build *openSUSE* images.
 Other distributions and build automation tools for embedded Linux
 systems such as Buildroot, OpenEmbedded and Yocto Project may be used by

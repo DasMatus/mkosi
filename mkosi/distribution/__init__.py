@@ -22,6 +22,7 @@ class PackageType(StrEnum):
     deb = enum.auto()
     pkg = enum.auto()
     apk = enum.auto()
+    emerge = enum.auto()
 
 
 class Distribution(StrEnum):
@@ -43,7 +44,8 @@ class Distribution(StrEnum):
     alma = enum.auto()
     azure = enum.auto()
     custom = enum.auto()
-
+    gentoo = enum.auto()
+    
     def is_centos_variant(self) -> bool:
         return self in (
             Distribution.centos,
